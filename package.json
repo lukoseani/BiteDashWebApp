@@ -1,0 +1,32 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "React JS App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukoseani/react_assignments.git"
+  },
+  "author": "Ani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukoseani/react_assignments/issues"
+  },
+  "homepage": "https://github.com/lukoseani/react_assignments#readme",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist":[
+   "last 2 chrome versions"
+  ]
+}

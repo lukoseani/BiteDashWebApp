@@ -1,0 +1,43 @@
+
+#title1,#title2{
+    background-color: rgb(0, 255, 225);
+    width: 160px;
+    height:100px;
+    padding:10px;
+    text-align:center;
+    } 
+
+    .header{
+        display:flex;
+        justify-content:space-between;
+        margin: 10px;
+        border:solid rgb(207, 202, 202);
+        padding-left:10px;
+    }
+    .logo{
+        width:100px;
+    }
+
+    .nav-items >ul {
+        list-style-type:none;
+        display:flex;
+        
+    }
+    .nav-items > ul > li{
+        padding: 20px;
+    }
+    .card{
+        width:200px;
+        padding:10px;
+        margin:10px;
+        border:1px solid rgb(217, 214, 214);
+    }
+    .card > img{
+        width: 100%;
+    }
+    .restaurant-list{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        
+    }
