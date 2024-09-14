@@ -41,3 +41,13 @@
         column-gap: 10px;
         
     }
+
+    .shimmerImageBox{
+     height: 100px;
+     width:200px;
+     background-color: rgb(197, 193, 193);
+    }
+    .contentBox{
+        height: 100px;
+        width:200px; 
+    }
