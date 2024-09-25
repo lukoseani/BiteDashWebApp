@@ -1,5 +1,11 @@
 export const IMG_CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
+export const PROXY_URL = 'https://api.allorigins.win/get?url=';
+
+export const API_URL_PART1 = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=9.7059523&lng=76.5114042&restaurantId=";
+
+export const API_URL_PART2 = "&catalog_qa=undefined&submitAction=ENTER";
+
 export const restaurantList = [
     {
         "info": {

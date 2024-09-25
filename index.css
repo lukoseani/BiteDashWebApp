@@ -22,9 +22,12 @@
         list-style-type:none;
         display:flex;
         
+        
     }
     .nav-items > ul > li{
         padding: 20px;
+        text-decoration:none;
+        
     }
     .card{
         width:200px;
@@ -51,3 +54,4 @@
         height: 100px;
         width:200px; 
     }
+  

@@ -1,7 +1,11 @@
 import {restaurantList} from '../constants';
 import RestaurantCard from './RestaurantCard';
 import {useState,useEffect} from 'react';
-import {Shimmer} from './Shimmer'
+import {Shimmer} from './Shimmer';
+import {Link} from 'react-router-dom';
+import {filterData} from '../utils/helper.js';
+import useOnline from '../utils/useOnline';
+
 
 
 
@@ -17,9 +21,11 @@ const Body = ()=>{
      getRestaurants();
     },[]);
 
-    function filterData(searchInput,restaurants){
-        return restaurants.filter(restaurant => restaurant?.info?.name?.toUpperCase().includes(searchInput?.toUpperCase()))
-        }
+    const isOnline = useOnline();
+
+    if(!isOnline){
+        return <h2>🛑 Offline, Please check your internet!!</h2>
+    }
     
         
      async function getRestaurants(){
@@ -43,8 +49,13 @@ const Body = ()=>{
             console.error(`error fetching data ${error}`);
         }
      }
+     console.log(filteredRestaurants);
      
-     if(allRestaurants?.length === 0) return (<Shimmer/>)
+     if(!allRestaurants) return (<Shimmer/>);
+
+     if(allRestaurants?.length == 0) return (<Shimmer/>);
+
+    
 
      
      
@@ -72,9 +83,12 @@ const Body = ()=>{
     </div>
     <div className="restaurant-list">
 
-        {filteredRestaurants.length === 0 ? <h1>No Restaurants Match Your Search</h1> :
+        {filteredRestaurants?.length === 0 ? <h1>No Restaurants Match Your Search</h1> :
         filteredRestaurants?.map(restaurant => {
-            return <RestaurantCard {...restaurant.info} key={restaurant.info.id}/>
+            return (
+                <Link to={"restaurant/"+restaurant.info.id} key={restaurant.info.id}><RestaurantCard {...restaurant.info}/></Link>
+            
+            )
         })}
             
             
